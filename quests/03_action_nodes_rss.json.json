@@ -1,0 +1,124 @@
+{
+  "name": "03_action_nodes_rss.json",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -304,
+        -192
+      ],
+      "id": "a860a596-30cb-408c-b182-d4d417cba951",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://www.yna.co.kr/rss/industry.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -160,
+        -192
+      ],
+      "id": "09d41c67-d3dd-4b44-85df-ff25b008a747",
+      "name": "RSS Read"
+    },
+    {
+      "parameters": {
+        "maxItems": 3,
+        "keep": "lastItems"
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -192
+      ],
+      "id": "90d78ee5-e4ce-4c5a-a29a-57a931eb3a10",
+      "name": "Limit"
+    },
+    {
+      "parameters": {
+        "chatId": "8397153996",
+        "text": "=n8n에서 보냅니다\n제목 : {{ $json.title }}\n발행일 : {{ $json.pubDate }}",
+        "replyMarkup": "=none",
+        "forceReply": {},
+        "replyKeyboardOptions": {},
+        "replyKeyboardRemove": {},
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        -192
+      ],
+      "id": "f606f1dc-21bc-4ae6-9759-7a260a2490e6",
+      "name": "Send a text message1",
+      "webhookId": "27416203-9ead-46be-9f08-c460f0ff98d9",
+      "credentials": {
+        "telegramApi": {
+          "id": "AhyOUjo1u8Yu3Mv2",
+          "name": "Telegram account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "RSS Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "Send a text message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "bad44039-8d91-4140-9205-a7c46245b456",
+  "meta": {
+    "instanceId": "3fa353c690499e9f79f1f083e84ae8762916a34b8beedb85df53990f1a16ae19"
+  },
+  "id": "Ga5cnDo4HjAYGjk4",
+  "tags": []
+}
