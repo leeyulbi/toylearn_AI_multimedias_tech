@@ -4,8 +4,6 @@
         그리고 첨부링크는 가격정책 내용이야. 회의록과 가격정책 내용을 바탕으로 이메일로 보낼거야.
         출력형식 - 업무메일형식, 담당자는 본인
     (첨부) 가격정책 https://docs.google.com/document/d/1KLU4oAAprirq1TxqV0p-rOtNxQEIuWCn5Mcd8sbXr8Y/edit?tab=t.0#heading=h.v65s6py9gn3b
-
-            
         회의록 :더 어반 십 '스파클링 아이스티' 론칭 캠페인 킥오프 미팅]
         클라이언트 미팅 회의록
         항목	내용
