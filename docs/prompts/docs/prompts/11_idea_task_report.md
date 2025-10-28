@@ -4,7 +4,7 @@
 
     아래 기획안 대상 정보 회사 예제 참고해서 -https://docs.google.com/document/d/11BX4r-y0wSPmoph00qYfYNOBZANjxyB9diIOPyepDTQ/edit?tab=t.0Sample_ https://docs.google.com/document/d/1sNeN3GRr044wWSfXkF7h12mQ9arGzgoEdD_eUM8YLOU/edit?tab=t.0 
 
-# 📘 소셜 미디어 영상 콘텐츠 기획안 (전문가용 기본 양식)
+# 📘 소셜 미디어 영상 콘텐츠 기획안 
 
 ---
 
